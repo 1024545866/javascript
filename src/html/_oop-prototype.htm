@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>原型对象</title>
+		
+		<!--
+		<script type="text/javascript" charset="utf-8" src="../js/_oop-prototype.js"></script>
+		-->
+		
+		<script type="text/javascript" charset="utf-8">
+			function Person ( name , age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype = {
+				constructor : Person,
+				sayName : function (){
+					alert(this.name);
+				}
+			}
+			
+			/*
+			 * 原型对象.constructor = 构造函数
+			 * 构造函数.prototype = 原型对象
+			 */
+//			alert("构造函数constructor : "+Person.constructor);
+//			alert("原型对象prototype : "+Person.prototype);
+//			alert("原型对象constructor : "+Person.prototype.constructor);
+			
+			/**
+			 *  实例化对象？ 构造函数？与原型对象的区别
+			 *  实例对象.prototype = 原型对象
+			 *  
+			 */
+			var p1 = new Person("校花", 24);
+			var p2 = new Person("小华", 24);
+			
+//			alert( " 两个实例对象是否相同 ："+p1 == p2);
+//			alert( p1 instanceof Person);
+//			alert( p2 instanceof Person);
+			
+//			alert( p1.prototype );
+//			alert( " constructor ："+p2.constructor);
+//			alert( " prototype ： "+p2.constructor.prototype);
+			
+						
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+

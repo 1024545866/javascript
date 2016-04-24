@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Untitled Document</title>
+		
+		<!--
+		<script type=text/jscript charset="utf-8" src="../js/biBao.js"></script>
+		-->
+		<script type="text/javascript" charset="utf-8" >
+			var dates = [];
+			var intDates = [];
+			var paramValue ="116.354682,39.95134;116.445806,39.933859;116.421373,39.952888;116.383428,39.884491;";
+			dates = paramValue.split(";")
+			console.log("dates"+dates);
+			for(var i = 0, len = dates.length; len > i; i++){
+				var replaceStr = dates[i];
+				//var replaceVal = replaceStr.replace(/\"/g, "");
+				
+				alert(typeof replaceVal);
+				intDates.push(replaceVal);
+				alert(replaceVal);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+

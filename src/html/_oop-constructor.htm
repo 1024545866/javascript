@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>对象的构造 与原型关系</title>
+		<script type="text/javascript" charset="utf-8" src=""></script>
+		<script type="text/javascript" charset="utf-8">
+			
+			function Person( name, age ){
+				this.name = name;
+				this.age = age;
+				this.sayName = sayName;
+			}
+			
+			function sayName(){
+				alert( this.name);
+			}
+			
+			Person.prototype = {
+				constructor : Person,
+				syaAge : function (){
+					alert(this.age);
+				}
+			}
+			
+			Person.prototype.checkValide = function (){
+				alert("checkValide");
+			}
+			
+			var obj = Person.prototype;
+			
+			var p1 = new Person("小佳", 28);
+			var p2 = new Person("老马", 29);
+			
+			alert( p1.constructor );
+			alert( p1.constructor.prototype);	
+			
+			
+			alert( Person.constructor );
+			alert( Person.constructor.prototype);	
+			
+						
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
